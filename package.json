@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Testing TIna CMS with 11ty",
   "scripts": {
-    "build": "npx tinacms build && npx @11ty/eleventy",
-    "watch": "rm -rf _site && npx tinacms dev -c \"npx @11ty/eleventy --serve\""
+    "clean": "rm -rf _site && rm -rf admin",
+    "build": "npm run clean && npx tinacms build && rm admin/.gitignore && npx @11ty/eleventy",
+    "watch": "npm run clean && npx tinacms dev -c \"npx @11ty/eleventy --serve\""
   },
   "license": "UNLICENSED",
   "dependencies": {
