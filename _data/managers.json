@@ -6,7 +6,11 @@
         "de": "Technischer Leiter",
         "en": "CTO"
       },
-      "portrait": "/assets/IMG_0804_2.PNG"
+      "portrait": "/assets/IMG_0804_2.PNG",
+      "customers": {
+        "de": "Viele\n",
+        "en": "Many\n"
+      }
     },
     {
       "fullName": "Jasper Rädisch",
