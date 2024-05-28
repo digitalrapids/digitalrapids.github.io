@@ -58,7 +58,7 @@
   <section class="bg-white text-black pb-24">
     <ul class="mx-auto max-w-screen-2xl px-12 grid grid-cols-3 gap-6">
       <li webc:for="manager of managers.managers" class="col-span-1 bg-drbeige">
-        <img class="pb-6" :src="manager.portrait">
+        <img webc:is="eleventy-image" class="pb-6" :src="`.${manager.portrait}`" alt="">
         <div class="px-4 mb-4">
           <p class="text-drgold font-black text-2xl" @text="manager.fullName"></p>
           <p class="text-drlightgray mt-2 mb-12" @text="dr18(manager.title)"></p>
