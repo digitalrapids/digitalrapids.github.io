@@ -4,7 +4,7 @@
   "description": "Testing Tina CMS with 11ty",
   "scripts": {
     "clean": "rm -rf _site && rm -rf admin",
-    "build": "npm run clean && npx tinacms build && rm admin/.gitignore && npx @11ty/eleventy",
+    "build": "npm run clean && npx tinacms build && rm admin/.gitignore && tailwindcss -i ./style.css -o ./assets/style.css && npx @11ty/eleventy",
     "watch": "npm run clean && npx tinacms dev -c \"npx @11ty/eleventy --serve & tailwindcss -i ./style.css -o ./assets/style.css --watch\""
   },
   "license": "UNLICENSED",
