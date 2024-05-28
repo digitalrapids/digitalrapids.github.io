@@ -11,4 +11,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addJavaScriptFunction("drExists", (thing) => !!thing);
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
 }
