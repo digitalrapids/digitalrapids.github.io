@@ -91,6 +91,13 @@ export default defineConfig({
                 required: true
                },
                {
+                 type: "object",
+                 name: "focus",
+                 label: "Focus",
+                 required: true,
+                 fields: localized('string'),
+               },
+               {
                  name: 'customers',
                  type: 'object',
                  label: 'Customers',
