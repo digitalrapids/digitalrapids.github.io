@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "baseUrl": ".",
+    "checkJs": true,
+    "module": "ES6",
+    "moduleResolution": "bundler",
+    "target": "ES6"
+  }
+}

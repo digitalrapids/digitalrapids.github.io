@@ -1,4 +1,4 @@
-import { defineConfig } from "tinacms";
+import { defineConfig } from 'tinacms'
 
 const localized = (type) => [
   {
@@ -20,7 +20,7 @@ const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
-  "main";
+  'main'
 
 export default defineConfig({
   branch,
@@ -31,56 +31,56 @@ export default defineConfig({
   token: process.env.TINA_TOKEN,
 
   build: {
-    outputFolder: "admin",
-    publicFolder: ".",
+    outputFolder: 'admin',
+    publicFolder: '.',
   },
   media: {
     tina: {
-      mediaRoot: "assets",
-      publicFolder: ".",
+      mediaRoot: 'assets',
+      publicFolder: '.',
     },
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
       {
-        name: "managers",
-        label: "Managers",
-        path: "_data",
+        name: 'managers',
+        label: 'Managers',
+        path: '_data',
         match: {
-          include: "managers",
+          include: 'managers',
         },
-        format: "json",
+        format: 'json',
         ui: {
           allowedActions: {
             create: false,
-            delete: false
-          }
+            delete: false,
+          },
         },
         fields: [
           {
-            type: "object",
-            name: "managers",
-            label: "Managers",
+            type: 'object',
+            name: 'managers',
+            label: 'Managers',
             required: true,
             list: true,
             ui: {
               itemProps: (item) => {
-                return { label: item?.fullName };
+                return { label: item?.fullName }
               },
             },
             fields: [
               {
-                type: "string",
-                name: "fullName",
-                label: "Full Name",
+                type: 'string',
+                name: 'fullName',
+                label: 'Full Name',
                 isTitle: true,
                 required: true,
               },
               {
-                type: "object",
-                name: "title",
-                label: "Title",
+                type: 'object',
+                name: 'title',
+                label: 'Title',
                 required: true,
                 fields: localized('string'),
               },
@@ -88,26 +88,26 @@ export default defineConfig({
                 name: 'portrait',
                 type: 'image',
                 label: 'Portrait',
-                required: true
-               },
-               {
-                 type: "object",
-                 name: "focus",
-                 label: "Focus",
-                 required: true,
-                 fields: localized('string'),
-               },
-               {
-                 name: 'customers',
-                 type: 'object',
-                 label: 'Customers',
-                 required: true,
-                 fields: localized('rich-text'),
-                },
-            ],    
-          }
+                required: true,
+              },
+              {
+                type: 'object',
+                name: 'focus',
+                label: 'Focus',
+                required: true,
+                fields: localized('string'),
+              },
+              {
+                name: 'customers',
+                type: 'object',
+                label: 'Customers',
+                required: true,
+                fields: localized('rich-text'),
+              },
+            ],
+          },
         ],
       },
     ],
   },
-});
+})
