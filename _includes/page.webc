@@ -101,7 +101,7 @@
               @text="dr18(website.team.customers)"
             ></label>
             <p
-              class="font-light leading-loose mb-4"
+              class="font-light leading-loose mb-4 whitespace-pre-wrap"
               @text="dr18(manager.customers)"
             ></p>
           </div>

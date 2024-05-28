@@ -1,6 +1,7 @@
 import { EleventyI18nPlugin } from '@11ty/eleventy'
 import pluginWebc from '@11ty/eleventy-plugin-webc'
-import { eleventyImagePlugin } from '@11ty/eleventy-img'
+import { eleventyImagePlugin, Image, generateHTML } from '@11ty/eleventy-img'
+import markdown from 'markdown-it'
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -28,4 +29,30 @@ export default function (eleventyConfig) {
       decoding: 'async',
     },
   })
+
+  const md = markdown()
+
+  md.renderer.rules.image = function (tokens, idx, options, env, self) {
+    const token = tokens[idx]
+    let imgSrc = `.${token.attrGet('src')}`
+    const imgAlt = token.content
+    const imgTitle = token.attrGet('title')
+
+    const htmlOpts = {
+      title: imgTitle,
+      alt: imgAlt,
+      loading: 'lazy',
+      decoding: 'async',
+    }
+
+    new Image(imgSrc)
+    const metadata = Image.statsSync(imgSrc)
+
+    console.log('jasper', metadata)
+
+    const generated = generateHTML(metadata, htmlOpts)
+
+    return generated
+  }
+  eleventyConfig.setLibrary('md', md)
 }

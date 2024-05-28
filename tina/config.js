@@ -44,6 +44,24 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: 'blogs',
+        label: 'Blog Entries',
+        path: 'blog',
+        fields: [
+          {
+            type: 'string',
+            label: 'Title',
+            name: 'title',
+          },
+          {
+            type: 'rich-text',
+            label: 'Post Body',
+            name: 'body',
+            isBody: true,
+          },
+        ],
+      },
+      {
         name: 'managers',
         label: 'Managers',
         path: '_data',
