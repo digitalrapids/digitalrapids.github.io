@@ -1,0 +1,2 @@
+<p @text="text" class="text-drgold font-black uppercase block">
+</p>

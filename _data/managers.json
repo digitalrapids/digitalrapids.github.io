@@ -3,6 +3,14 @@
     {
       "fullName": "Jasper Rädisch",
       "portrait": "/assets/profile.png",
+      "title": {
+        "de": "Senior Software Architekt",
+        "en": "Senior Software Architect"
+      },
+      "focus": {
+        "de": "Web apps",
+        "en": "Web apps"
+      },
       "customers": {
         "de": "Keine\nWirklich",
         "en": "None\nReally"

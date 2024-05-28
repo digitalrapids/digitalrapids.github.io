@@ -1,6 +1,0 @@
-<ul>
-    <h1>Team</h1>
-    <li webc:for="manager of managers.managers">
-        <p @text="manager.fullName"></p>
-    </li>
-</ul>

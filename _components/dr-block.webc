@@ -1,0 +1,36 @@
+<article class="flex gap-24 mx-auto max-w-screen-2xl px-12">
+  <div class="basis-3/5 grow">
+    <dr-overline :text="dr18(block.overline)"></dr-overline>
+
+    <h1 webc:if="drExists(block.headline)" @text="dr18(block.headline)" class="font-black text-7xl pt-6 pb-12"></h1>
+
+    <h1 webc:if="drExists(block.headline_minor)" @text="dr18(block.headline_minor)" class="font-black text-5xl py-6">
+    </h1>
+
+    <p webc:if="drExists(block.description)" @text="dr18(block.description)"
+      class="whitespace-pre-line font-light leading-loose pb-12">
+    </p>
+
+    <a webc:if="drExists(block.cta)"
+      class="h-9 inline-flex gap-1.5 items-center px-6 py-6 bg-drpink text-white rounded-3xl font-black text-base">
+      <span @text="dr18(block.cta)"></span>
+      <span class="fill-current h-4 w-4">
+        <dr-icon icon="arrow-right"></dr-icon>
+      </span>
+    </a>
+
+    <a webc:if="drExists(block.cta_minor)"
+      class="inline-flex gap-1.5 pb-0.5 items-center text-drpink text-base font-black border-b-2 border-drpink">
+      <span @text="dr18(block.cta_minor)">
+      </span>
+      <span class="fill-current h-4 w-4">
+        <dr-icon icon="arrow-right"></dr-icon>
+      </span>
+    </a>
+
+    <slot></slot>
+  </div>
+  <div webc:if="drExists(block.image)" class="basis-2/5">
+    <img src="/assets/foto_platzhalter_anne.jpg">
+  </div>
+</article>

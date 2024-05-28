@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html :lang="page.lang">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>digital rapids</title>
+  <link rel="stylesheet" href="/assets/style.css" webc:keep>
+</head>
+
+<body class="bg-black text-white tracking-wide">
+  <dr-icons></dr-icons>
+  <nav class="flex justify-between pt-12 items-center mx-auto max-w-screen-2xl px-12">
+    <img class="w-40 h-12" src="/assets/logo.svg" alt="white text 'digital rapids' under stylized gold bars">
+    <ol class="flex gap-9 font-black text-base items-center">
+      <li webc:for="item of website.menu">
+        <a href="#" @text="dr18(item)"></a>
+      </li>
+      <li class="w-9 h-9 bg-drpink block rounded-3xl inline-flex items-center justify-center">
+        <a class="block text-white fill-current h-5 w-5">
+          <dr-icon icon="bars"></dr-icon>
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <section class="pt-44 bg-waves bg-cover bg-center">
+    <dr-block :@block="website.blocks.intro"></dr-block>
+    <div class="pt-80">
+      <a class="block text-drpink fill-current h-8 w-8 m-auto">
+        <dr-icon icon="chevron-down"></dr-icon>
+      </a>
+    </div>
+  </section>
+  <img class="w-full" src="/assets/welle_einzeln.svg" alt="">
+  <section class="pt-44">
+    <dr-block :@block="website.blocks.company"></dr-block>
+  </section>
+  <section class="pt-44 pb-24">
+    <dr-block :@block="website.blocks.services">
+      <ul class="grid grid-cols-3 gap-6 pt-6">
+        <li class="col-span-1 bg-drdarkgray rounded-3xl p-8 pl-4 flex-col content-end h-64"
+          webc:for="service of website.services">
+          <p class="flex mb-2">
+            <span class="block text-drpink fill-current h-4 w-4 mt-2">
+              <dr-icon icon="chevron-right"></dr-icon>
+            </span>
+            <span class="font-bold text-2xl" @text="dr18(service.name)"></span>
+          </p>
+          <p class="pl-4" @text="dr18(service.description)"></p>
+        </li>
+      </ul>
+    </dr-block>
+  </section>
+  <section class="bg-white text-black pt-44">
+    <dr-block :@block="website.blocks.team"></dr-block>
+  </section>
+  <img class="w-full bg-white" src="/assets/welle_einzeln.svg" alt="">
+  <section class="bg-white text-black pb-24">
+    <ul class="mx-auto max-w-screen-2xl px-12 grid grid-cols-3 gap-6">
+      <li webc:for="manager of managers.managers" class="col-span-1 bg-drbeige">
+        <img class="pb-6" :src="manager.portrait">
+        <div class="px-4 mb-4">
+          <p class="text-drgold font-black text-2xl" @text="manager.fullName"></p>
+          <p class="text-drlightgray mt-2 mb-12" @text="dr18(manager.title)"></p>
+          <label class="text-drgold font-black uppercase" @text="dr18(website.team.focus)"></label>
+          <p class="font-light leading-loose mb-4" @text="dr18(manager.focus)"></p>
+          <label class="text-drgold font-black uppercase" @text="dr18(website.team.customers)"></label>
+          <p class="font-light leading-loose mb-4" @text="dr18(manager.customers)"></p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</body>
+
+</html>

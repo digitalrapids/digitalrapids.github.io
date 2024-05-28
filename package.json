@@ -1,11 +1,11 @@
 {
   "name": "dr-tina",
   "version": "1.0.0",
-  "description": "Testing TIna CMS with 11ty",
+  "description": "Testing Tina CMS with 11ty",
   "scripts": {
     "clean": "rm -rf _site && rm -rf admin",
     "build": "npm run clean && npx tinacms build && rm admin/.gitignore && npx @11ty/eleventy",
-    "watch": "npm run clean && npx tinacms dev -c \"npx @11ty/eleventy --serve\""
+    "watch": "npm run clean && npx tinacms dev -c \"npx @11ty/eleventy --serve & tailwindcss -i ./style.css -o ./assets/style.css --watch\""
   },
   "license": "UNLICENSED",
   "dependencies": {
