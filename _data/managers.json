@@ -1,19 +1,23 @@
 {
   "managers": [
     {
+      "fullName": "Felix Menden",
+      "title": {
+        "de": "Technischer Leiter",
+        "en": "CTO"
+      },
+      "portrait": "/assets/IMG_0804_2.PNG"
+    },
+    {
       "fullName": "Jasper Rädisch",
-      "portrait": "/assets/profile.png",
       "title": {
         "de": "Senior Software Architekt",
         "en": "Senior Software Architect"
       },
-      "focus": {
-        "de": "Web apps",
-        "en": "Web apps"
-      },
+      "portrait": "/assets/profile.png",
       "customers": {
-        "de": "Keine\nWirklich",
-        "en": "None\nReally"
+        "de": "Keine\nWirklich\n",
+        "en": "None\nReally\n"
       }
     }
   ]
