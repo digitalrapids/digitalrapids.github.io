@@ -7,6 +7,10 @@
         "en": "CTO"
       },
       "portrait": "/assets/IMG_0804_2.PNG",
+      "focus": {
+        "de": "TBD",
+        "en": "TBD"
+      },
       "customers": {
         "de": "Viele\n",
         "en": "Many\n"
@@ -19,6 +23,10 @@
         "en": "Senior Software Architect"
       },
       "portrait": "/assets/profile.png",
+      "focus": {
+        "de": "TBD",
+        "en": "TBD"
+      },
       "customers": {
         "de": "Keine\nWirklich\n",
         "en": "None\nReally\n"
