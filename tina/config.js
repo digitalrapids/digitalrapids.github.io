@@ -29,12 +29,13 @@ export default defineConfig({
   clientId: process.env.TINA_PUBLIC_CLIENT_ID,
   // Get this from tina.io
   token: process.env.TINA_TOKEN,
-  search: {
-    tina: {
-      indexerToken: process.env.TINA_SEARCH_TOKEN,
-      stopwordLanguages: ['eng', 'deu'],
-    },
-  },
+  // TODO: make this work
+  // search: {
+  //   tina: {
+  //     indexerToken: process.env.TINA_SEARCH_TOKEN,
+  //     stopwordLanguages: ['eng', 'deu'],
+  //   },
+  // },
   build: {
     outputFolder: 'admin',
     publicFolder: '.',
