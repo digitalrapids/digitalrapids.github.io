@@ -92,6 +92,13 @@ export default defineConfig({
               },
               {
                 type: 'object',
+                name: 'portrait_alt',
+                label: 'Portrait Alt Tag',
+                required: true,
+                fields: localized('string'),
+              },
+              {
+                type: 'object',
                 name: 'focus',
                 label: 'Focus',
                 required: true,

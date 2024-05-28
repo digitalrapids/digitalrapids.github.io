@@ -7,6 +7,10 @@
         "en": "CEO"
       },
       "portrait": "/assets/01575 Anne I fV.JPG",
+      "portrait_alt": {
+        "de": "TBD",
+        "en": "TBD"
+      },
       "focus": {
         "de": "TBD",
         "en": "TBD"
@@ -22,7 +26,11 @@
         "de": "Senior Software Architekt",
         "en": "Senior Software Architect"
       },
-      "portrait": "/assets/01541 Jasper fV.JPG",
+      "portrait": "/assets/profile.png",
+      "portrait_alt": {
+        "de": "TBD",
+        "en": "TBD"
+      },
       "focus": {
         "de": "TBD",
         "en": "TBD"
