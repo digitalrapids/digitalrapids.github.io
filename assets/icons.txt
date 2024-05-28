@@ -1,0 +1,12 @@
+Odoo hat Fontawesome Support:
+
+https://www.odoo.com/documentation/17.0/developer/reference/user_interface/icons.html
+
+Arrow Down: https://fontawesome.com/icons/arrow-down
+Chevron Right: https://fontawesome.com/icons/chevron-right
+Mail (Envelope): https://fontawesome.com/icons/envelope
+LinkedIn: https://fontawesome.com/icons/linkedin
+Xing: https://fontawesome.com/icons/xing
+Bridge: https://fontawesome.com/icons/bridge
+Establish (Medal): https://fontawesome.com/icons/medal
+Transform (Line Chart): https://fontawesome.com/icons/chart-line
