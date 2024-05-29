@@ -48,8 +48,6 @@ export default function (eleventyConfig) {
     new Image(imgSrc)
     const metadata = Image.statsSync(imgSrc)
 
-    console.log('jasper', metadata)
-
     const generated = generateHTML(metadata, htmlOpts)
 
     return generated

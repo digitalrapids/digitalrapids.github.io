@@ -8,7 +8,7 @@ module.exports = {
           "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/wellen_hintergrund.svg')",
       },
       colors: {
-        drbeige: '#fcfbfa',
+        drbeige: '#fcfbfa', // f6f5f4
         drdarkgray: '#333333',
         drgold: '#ceb37e',
         drlightgray: '#c6c6c6',

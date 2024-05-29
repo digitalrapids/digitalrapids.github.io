@@ -1,4 +1,5 @@
 ---
+tags: blog
 title: A Modern Approach to CMS
 ---
 

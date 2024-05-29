@@ -1,0 +1,6 @@
+<h1>Blog Entries</h1>
+<ol>
+  <li webc:for="blog of collections.blog">
+    <a :href="blog.url" @text="blog.data.title"></a>
+  </li>
+</ol>

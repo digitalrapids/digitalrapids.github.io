@@ -53,7 +53,18 @@ export default defineConfig({
         name: 'blogs',
         label: 'Blog Entries',
         path: 'blog',
+        defaultItem: () => {
+          return {
+            tags: 'blog',
+          }
+        },
         fields: [
+          {
+            type: 'string',
+            label: 'Collection',
+            name: 'tags',
+            options: [{ label: 'blog', value: 'blog' }],
+          },
           {
             type: 'string',
             label: 'Title',
