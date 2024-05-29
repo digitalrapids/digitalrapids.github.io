@@ -32,7 +32,7 @@ export default {
         en: 'TBD',
       },
       headline: {
-        de: 'Digital zukünftsfähig sein.',
+        de: 'Digital zukunftsfähig sein.',
         en: 'TBD',
       },
       cta: {
